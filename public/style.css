@@ -498,3 +498,79 @@ input::placeholder{
     transform:translateY(-50%) rotate(360deg);
   }
 }
+.ajuda-calculo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:24px;
+  color:#cbb89c;
+  font-size:15px;
+}
+
+.botao-ajuda{
+  padding:10px 18px;
+  font-size:13px;
+  border-radius:10px;
+  background:#3d2c1d;
+  color:#f3c86a;
+  border:1px solid #5f472d;
+}
+
+.botao-ajuda:hover{
+  background:#4f3924;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+  padding:20px;
+}
+
+.modal.ativo{
+  display:flex;
+}
+
+.modal-conteudo{
+  width:100%;
+  max-width:900px;
+  background:#1a120d;
+  border:1px solid #5f472d;
+  border-radius:24px;
+  padding:32px;
+  position:relative;
+  color:#f5e7c4;
+  animation:fadeIn 0.3s ease;
+}
+
+.modal-conteudo h2{
+  color:#d4a646;
+  margin-bottom:12px;
+}
+
+.modal-conteudo p{
+  color:#cbb89c;
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+.modal-conteudo img{
+  width:100%;
+  border-radius:16px;
+  display:block;
+}
+
+.fechar-modal{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:40px;
+  height:40px;
+  padding:0;
+  border-radius:50%;
+  font-size:24px;
+}

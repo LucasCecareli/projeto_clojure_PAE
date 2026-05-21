@@ -121,4 +121,12 @@ async function calcularTrastes() {
 
     botao.innerText = "CALCULAR";
   }
+  
+}
+function abrirModal() {
+  document.getElementById("modal-ajuda").classList.add("ativo");
+}
+
+function fecharModal() {
+  document.getElementById("modal-ajuda").classList.remove("ativo");
 }

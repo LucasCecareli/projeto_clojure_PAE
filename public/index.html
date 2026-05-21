@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Luthier José Valderrama | Violões</title>
+  <title>Luthier José Valderrama | Calculadora de Trastes</title>
 
   <link rel="icon" type="image/png" href="./.img/logo.png">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,31 +15,27 @@
   <main class="container">
 
     <section class="topo">
+      <div class="cabecalho-topo">
 
-  <div class="cabecalho-topo">
+        <div class="texto-topo">
+          <span class="subtitulo">
+            LUTHIERIA JOSÉ VALDERRAMA • INSTRUMENTOS DE CORDA
+          </span>
 
-    <div class="texto-topo">
+          <h1>Calculadora de Trastes</h1>
 
-      <span class="subtitulo">
-        LUTHIERIA JOSÉ VALDERRAMA • INSTRUMENTOS DE CORDA
-      </span>
+          <p>
+            Informe o tamanho da escala do instrumento em milímetros
+            para calcular a posição correta dos trastes.
+          </p>
+        </div>
 
-      <h1>Calculadora de Trastes</h1>
+        <div class="logo-container">
+          <img src="./.img/logo.png" alt="Logo Valderrama">
+        </div>
 
-      <p>
-        Informe o tamanho da escala do instrumento em milímetros
-        para calcular a posição correta dos trastes.
-      </p>
-
-    </div>
-
-    <div class="logo-container">
-      <img src="/.img/logo.png" alt="Logo Valderrama">
-    </div>
-
-  </div>
-
-</section>
+      </div>
+    </section>
 
     <section class="formulario">
       <input
@@ -55,6 +50,14 @@
       </button>
     </section>
 
+    <section class="ajuda-calculo">
+      <span>Não sabe onde medir a escala do instrumento?</span>
+
+      <button class="botao-ajuda" onclick="abrirModal()">
+        Entender os Trastes
+      </button>
+    </section>
+
     <div id="mensagem" class="mensagem"></div>
 
     <section id="resumo" class="resumo"></section>
@@ -64,7 +67,7 @@
         <thead>
           <tr>
             <th>Traste</th>
-            <th>Espaçamento (mm)</th>
+            <th>Espaçamento do Traste (mm)</th>
             <th>Distância até o Rastilho (mm)</th>
             <th>Distância até a Pestana (mm)</th>
           </tr>
@@ -75,6 +78,29 @@
     </section>
 
   </main>
+
+  <div id="modal-ajuda" class="modal">
+    <div class="modal-conteudo">
+
+      <button class="fechar-modal" onclick="fecharModal()">
+        ×
+      </button>
+
+      <h2>Como funciona o cálculo dos trastes?</h2>
+
+      <p>
+        A escala do instrumento é a distância entre a pestana e a ponte.
+        A calculadora usa essa medida para determinar a posição correta
+        de cada traste no braço do instrumento.
+      </p>
+
+      <img
+        src="./.img/partes-violao.png"
+        alt="Imagem explicativa das partes principais do violão"
+      >
+
+    </div>
+  </div>
 
   <script src="script.js"></script>
 
