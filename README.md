@@ -1,56 +1,143 @@
+# Calculadora de Trastes
 
-API WEB em Clojure para cálculo da posição dos trastes de instrumentos de corda.
-# 🎸 Calculadora de Trastes - Clojure API
+Aplicação web desenvolvida em **Clojure** para calcular automaticamente o posicionamento dos trastes de instrumentos de corda, utilizando a fórmula matemática padrão da luthieria.
 
-Projeto desenvolvido para a disciplina de Programação Funcional com Clojure do Instituto Mauá de Tecnologia.
+O projeto possui:
 
-## 📖 Sobre o Projeto
-
-A aplicação consiste em uma API WEB para cálculo da posição dos trastes de instrumentos de corda com afinação temperada, como:
-
-- Violão
-- Guitarra
-- Baixo
-- Viola
-- Instrumentos artesanais de luthieria
-
-O sistema recebe o tamanho da escala do instrumento em milímetros e retorna:
-
-- Distância do traste até a pestana
-- Distância do traste até o rastilho
-- Espaçamento entre os trastes
+- Backend funcional em Clojure
+- API REST
+- Frontend responsivo
+- Integração entre frontend e backend
+- Interface inspirada em aplicações premium de luthieria
 
 ---
 
-## 🎯 Objetivo
+# Tecnologias Utilizadas
 
-O projeto foi desenvolvido em parceria com o luthier José Valderrama, com o objetivo de integrar a calculadora ao site oficial da oficina.
-
-Além da utilidade prática para construção de instrumentos, a ferramenta também busca:
-
-- Atrair futuros alunos para o curso de luthieria
-- Demonstrar conceitos acústicos aplicados
-- Valorizar a construção artesanal de instrumentos
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-### Backend
+## Backend
 - Clojure
 - Ring
 - Compojure
+- Cheshire
 
-### Frontend
+## Frontend
 - HTML5
 - CSS3
 - JavaScript
 
+## Ferramentas
+- VS Code
+- Git
+- GitHub
+- Live Server
+
 ---
 
-## 📐 Fórmula Utilizada
+# 📐 Fórmula Utilizada
 
-A posição dos trastes é calculada pela fórmula da afinação temperada:
+O cálculo dos trastes é realizado através da fórmula:
 
 ```math
-d_n = L * (1 - 1 / 2^(n/12))
+d = L × (1 - 1 / 2^(n/12))
+```
+
+# Funcionalidades
+
+✅ Cálculo automático de 24 trastes  
+✅ Integração frontend + backend  
+✅ API REST em Clojure  
+✅ Interface moderna e responsiva  
+✅ Exibição:
+- Espaçamento entre trastes
+- Distância até o rastilho
+- Distância até a pestana
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
+projeto_clojure_PAE/
+│
+├── public/
+│   ├── .img/
+│   │   └── logo.png
+│   │
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── src/
+│   └── calculadora_trastes/
+│       ├── core.clj
+│       └── server.clj
+│
+├── deps.edn
+└── README.md
+```
+
+---
+
+# ⚙️ Como Executar o Projeto
+
+## 1. Clone o repositório
+
+```bash
+git clone https://github.com/LucasCecareli/projeto_clojure_PAE.git
+```
+
+---
+
+## 2. Entre na pasta
+
+```bash
+cd projeto_clojure_PAE
+```
+
+---
+
+## 3. Execute o backend
+
+```bash
+clj -M:run
+```
+
+O servidor iniciará em:
+
+```txt
+http://localhost:3000
+```
+
+---
+
+## 4. Execute o frontend
+
+Abra o arquivo:
+
+```txt
+public/index.html
+```
+
+com o **Live Server** do VS Code.
+
+A aplicação será aberta em:
+
+```txt
+http://127.0.0.1:5500/public/index.html
+```
+
+# 👨‍💻 Autor
+
+## Lucas Cecareli
+
+Projeto desenvolvido para a disciplina de:
+
+**Programação Funcional com Linguagem Clojure**
+
+Instituto Mauá de Tecnologia
+
+---
+
+# 📄 Licença
+
+Projeto acadêmico desenvolvido para fins educacionais.
