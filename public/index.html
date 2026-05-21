@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Trastes</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="topo">
+      <h1>Calculadora de Trastes</h1>
+      <p>
+        Informe a escala do instrumento em milímetros
+      </p>
+    </div>
+
+    <div class="formulario">
+
+      <input
+        type="number"
+        id="escala"
+        placeholder="Ex: 650">
+
+      <button onclick="calcularTrastes()">CALCULAR</button>
+
+    </div>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Traste</th>
+          <th>Espaçamento (mm)</th>
+          <th>Distância Rastilho (mm)</th>
+          <th>Distância Pestana (mm)</th>
+        </tr>
+      </thead>
+
+      <tbody id="tabela-trastes">
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
