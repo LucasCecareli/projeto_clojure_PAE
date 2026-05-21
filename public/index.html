@@ -11,44 +11,68 @@
 
 <body>
 
-  <div class="container">
+  <main class="container">
 
-    <div class="topo">
+    <section class="topo">
+
+  <div class="cabecalho-topo">
+
+    <div class="texto-topo">
+
+      <span class="subtitulo">
+        LUTHIERIA JOSÉ VALDERRAMA • INSTRUMENTOS DE CORDA
+      </span>
+
       <h1>Calculadora de Trastes</h1>
+
       <p>
-        Informe a escala do instrumento em milímetros
+        Informe o tamanho da escala do instrumento em milímetros
+        para calcular a posição correta dos trastes.
       </p>
+
     </div>
 
-    <div class="formulario">
+    <div class="logo-container">
+      <img src="/.img/logo.png" alt="Logo Valderrama">
+    </div>
 
+  </div>
+
+</section>
+
+    <section class="formulario">
       <input
         type="number"
         id="escala"
-        placeholder="Ex: 650">
+        placeholder="Ex: 650"
+        min="1"
+      >
 
-      <button onclick="calcularTrastes()">CALCULAR</button>
+      <button onclick="calcularTrastes()">
+        CALCULAR
+      </button>
+    </section>
 
-    </div>
+    <div id="mensagem" class="mensagem"></div>
 
-    <table>
+    <section id="resumo" class="resumo"></section>
 
-      <thead>
-        <tr>
-          <th>Traste</th>
-          <th>Espaçamento (mm)</th>
-          <th>Distância Rastilho (mm)</th>
-          <th>Distância Pestana (mm)</th>
-        </tr>
-      </thead>
+    <section class="tabela-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Traste</th>
+            <th>Espaçamento (mm)</th>
+            <th>Distância até o Rastilho (mm)</th>
+            <th>Distância até a Pestana (mm)</th>
+          </tr>
+        </thead>
 
-      <tbody id="tabela-trastes">
+        <tbody id="tabela-trastes"></tbody>
+      </table>
+    </section>
 
-      </tbody>
-
-    </table>
-
-  </div>
+  </main>
 
   <script src="script.js"></script>
 
