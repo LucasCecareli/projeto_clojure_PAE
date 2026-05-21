@@ -8,3 +8,6 @@ classes/
 .vscode/
 .DS_Store
 .env
+.clj-kondo/
+.lsp/
+.cpcache/
