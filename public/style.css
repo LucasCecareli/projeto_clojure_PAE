@@ -9,12 +9,19 @@ body{
  background:
   radial-gradient(
     circle at top left,
-    #3a2412,
-    #1a120d 45%,
-    #0d0906
+    rgba(88,54,28,0.96),
+    rgba(48,30,18,0.88) 45%,
+    rgba(26,16,11,0.88)
+  ),
+  radial-gradient(
+    circle at bottom right,
+    rgba(212,166,70,0.22),
+    transparent 44%
   );
+ background-size: 220% 220%;
+ background-position: 0% 0%;
+ animation: backgroundMove 25s ease infinite;
 
-    
   color:#f5e7c4;
 
   font-family: 'Poppins', sans-serif;
@@ -30,11 +37,11 @@ body{
 .container{
   width:80%;
   max-width:1000px;
-  background:#1a120d;
-  border:1px solid #5f472d;
+  background:#231815;
+  border:1px solid #6b5538;
   border-radius:24px;
   padding:40px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  box-shadow:0 20px 60px rgba(0,0,0,0.42);
   backdrop-filter:blur(8px);
   animation:fadeIn 0.8s ease;
   position:relative;
@@ -372,6 +379,16 @@ button:disabled {
     transform:translateY(0);
   }
 }
+
+@keyframes backgroundMove{
+  0%, 100%{
+    background-position: 0% 0%, 0% 0%;
+  }
+  50%{
+    background-position: 100% 100%, 20% 80%;
+  }
+}
+
 input::placeholder{
 
   color:#8e857b;

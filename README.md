@@ -43,11 +43,11 @@ d = L × (1 - 1 / 2^(n/12))
 
 # Funcionalidades
 
-✅ Cálculo automático de 24 trastes  
-✅ Integração frontend + backend  
-✅ API REST em Clojure  
-✅ Interface moderna e responsiva  
-✅ Exibição:
+Cálculo automático de 24 trastes  
+Integração frontend + backend  
+API REST em Clojure  
+Interface moderna e responsiva  
+Exibição:
 - Espaçamento entre trastes
 - Distância até o rastilho
 - Distância até a pestana
@@ -129,6 +129,7 @@ http://127.0.0.1:5500/public/index.html
 # 👨‍💻 Autor
 
 ## Lucas Cecareli
+## Ewerton da Cruz
 
 Projeto desenvolvido para a disciplina de:
 

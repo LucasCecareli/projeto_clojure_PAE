@@ -1,6 +1,5 @@
 async function calcularTrastes() {
 
-  // ELEMENTOS DA TELA
   const escala = document.getElementById("escala").value;
 
   const tabela = document.getElementById("tabela-trastes");
@@ -12,7 +11,7 @@ async function calcularTrastes() {
   const botao = document.getElementById("botao-calcular");
 
 
-  // LIMPA RESULTADOS ANTERIORES
+
   tabela.innerHTML = "";
 
   mensagem.innerHTML = "";
@@ -20,7 +19,7 @@ async function calcularTrastes() {
   resumo.innerHTML = "";
 
 
-  // VALIDAÇÃO
+
   if (!escala || escala <= 0) {
 
     mensagem.innerHTML =
@@ -32,7 +31,6 @@ async function calcularTrastes() {
 
   try {
 
-    // ESTADO DE LOADING
     botao.classList.add("loading");
 
     botao.disabled = true;
@@ -40,12 +38,10 @@ async function calcularTrastes() {
     botao.innerText = "CALCULANDO...";
 
 
-    // REQUISIÇÃO PARA API
     const resposta =
       await fetch(`/api/trastes?escala=${escala}`);
 
 
-    // VERIFICA ERRO DA API
     if (!resposta.ok) {
 
       throw new Error(
@@ -54,13 +50,11 @@ async function calcularTrastes() {
     }
 
 
-    // CONVERTE JSON
     const dados = await resposta.json();
 
     await new Promise(resolve => setTimeout(resolve, 700));
 
 
-    // RESUMO
     resumo.innerHTML = `
       <p>
         <strong>Escala:</strong>
@@ -79,7 +73,6 @@ async function calcularTrastes() {
     `;
 
 
-    // CRIA LINHAS DA TABELA
     dados.forEach((traste) => {
 
       tabela.innerHTML += `
@@ -114,7 +107,6 @@ async function calcularTrastes() {
 
   } finally {
 
-    // REMOVE LOADING
     botao.classList.remove("loading");
 
     botao.disabled = false;
